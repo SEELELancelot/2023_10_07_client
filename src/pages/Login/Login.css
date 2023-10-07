@@ -1,0 +1,31 @@
+#root {
+    height: 100%;
+}
+
+.MyPage {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: url("background.jpg") 0;
+}
+
+.wrap_content {
+
+    width:400px;
+    background-color: rgba(255, 255, 255, 0.33);
+    /*box-shadow: 0px 8px 32px 0 rgba(0,0,255,0.33) ;*/
+}
+
+
+
+.LoginContent {
+
+    padding: 50px;
+
+}
+
+.login_text {
+    color: gray;
+    padding-left: 5px;
+}
