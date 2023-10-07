@@ -8,7 +8,6 @@ const CurrentDetailSave=()=>{
   const params = useParams();
   const [currentData,setCurrentData]=useState([]);
   useEffect(()=>{
-      console.log(params);
       fetchData();
   },[])
   const fetchData=async ()=>{

@@ -277,7 +277,12 @@ const axiosGetCurrentDetail=async (data)=>{
   return result;
 }
 const axiosGetFixDetail=async (data)=>{
+  // console.log(data);
   const result = await axiosInstance.post("users/getFixDetail", data);
+  return result;
+}
+const axiosGetCheckDetail=async (data)=>{
+  const result = await axiosInstance.post("users/getCheckDetail", data);
   return result;
 }
 
@@ -334,5 +339,6 @@ export {
   axiosGetSaveData,
   axiosGetCurrentDetail,
   axiosGetFixDetail,
+  axiosGetCheckDetail,
   mybaseUrl
 }

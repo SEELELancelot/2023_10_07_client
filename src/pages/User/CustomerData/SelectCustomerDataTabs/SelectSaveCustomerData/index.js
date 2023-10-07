@@ -27,7 +27,7 @@ const SelectSaveCustomerData = () => {
     },
 
     {
-      title: '姓名',
+      title: '戶名',
       dataIndex: 'customer_name',
       key: 'customer_name',
       render: (item) => {
