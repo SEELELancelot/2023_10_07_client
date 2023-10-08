@@ -34,7 +34,7 @@ const SelectCustomerDetailData=()=>{
   ];
 
   return(
-    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={false}  />
+    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={true}  />
 
   )
 }
