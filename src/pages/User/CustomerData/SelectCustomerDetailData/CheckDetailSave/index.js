@@ -5,17 +5,19 @@ import {Table} from "antd";
 
 const CheckDetailSave = () => {
   const params = useParams();
-  const [checkdata,setCheckData]=useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [checkdata, setCheckData] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const customer_id=params.id;
-    const result=await axiosGetCheckDetail({customer_id});
-    const {success,message}=result.data;
-    console.log(success,message);
-    if(success===1){
+    const customer_id = params.id;
+    const result = await axiosGetCheckDetail({customer_id});
+    const {success, message} = result.data;
+    console.log(success, message);
+    if (success === 1) {
       setCheckData(message);
+      setIsLoading(false);
     }
   }
 
@@ -46,28 +48,32 @@ const CheckDetailSave = () => {
 
   return (
     <div>
-      <Table columns={columns} dataSource={checkdata}
-             onRow={(record, rowIndex) => {
-               return {
-                 // onDoubleClick: (event) => {
-                 //     console.log(record.customer_id);
-                 //      props.updateStoreColor(record.customer_id);
-                 //     navigate(record.customer_id);
-                 // }, // click row
-               };
-             }}
-             rowKey={record => record.checkAccount}
-             pagination={{
-               pageSizeOptions: ["10", "20", "30", "40"],
-               showSizeChanger: true,
-               defaultPageSize: 10,
-               defaultCurrent: 1
-             }}
+      {
+        isLoading ? <></> :
+          <Table columns={columns} dataSource={checkdata}
+                 onRow={(record, rowIndex) => {
+                   return {
+                     // onDoubleClick: (event) => {
+                     //     console.log(record.customer_id);
+                     //      props.updateStoreColor(record.customer_id);
+                     //     navigate(record.customer_id);
+                     // }, // click row
+                   };
+                 }}
+                 rowKey={record => record.checkAccount}
+                 pagination={{
+                   pageSizeOptions: ["10", "20", "30", "40"],
+                   showSizeChanger: true,
+                   defaultPageSize: 10,
+                   defaultCurrent: 1
+                 }}
 
-             rowClassName={(record, index) => {
+                 rowClassName={(record, index) => {
 
-             }}
-      />
+                 }}
+          />
+      }
+
     </div>
   )
 }

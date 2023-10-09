@@ -8,6 +8,7 @@ import {
 import {Button, Table} from "antd";
 import React, {useEffect, useState} from "react";
 import {axiosGetLenderData, axiosSelectAllCustomer} from "@/networkReuest/Myaxios";
+import {NavLink} from "@/.umi/exports";
 
 
 
@@ -59,6 +60,16 @@ const SelectCustomerData = () => {
         return (
           <div>
             {item}
+          </div>
+        )
+      },
+    },
+    {
+      title: '客戶資料',
+      render: (item) => {
+        return (
+          <div>
+            <NavLink to={`/user/selectCustomerData/${item.customer_id}`}>客戶資料</NavLink>
           </div>
         )
       },

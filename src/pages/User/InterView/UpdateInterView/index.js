@@ -122,7 +122,7 @@ const UpdateInterView = () => {
     },
     {
       title: '訪談地點',
-      width: 100,
+      width: 400,
       dataIndex: 'interview_location',
       key: 'interview_location',
       render: (item) => {

@@ -289,6 +289,10 @@ const axiosGetCustomerData=async (data)=>{
   const result=await axiosInstance.post("users/getCustomerData",data);
   return result;
 }
+const axiosGetLenderRecordDetail=async (data)=>{
+  const result=await axiosInstance.post("users/getLenderRecordDetail",data);
+  return result;
+}
 
 export {
   axiosLogin,
@@ -345,5 +349,6 @@ export {
   axiosGetFixDetail,
   axiosGetCheckDetail,
   axiosGetCustomerData,
+  axiosGetLenderRecordDetail,
   mybaseUrl
 }

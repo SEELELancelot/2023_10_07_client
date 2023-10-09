@@ -3,6 +3,7 @@ import CurrentDetailSave from "@/pages/User/CustomerData/SelectCustomerDetailDat
 import CustomerBasicData from "@/pages/User/CustomerData/SelectCustomerDetailData/CustomerBasicData";
 import FixDetailSave from "@/pages/User/CustomerData/SelectCustomerDetailData/FixDetailSave";
 import CheckDetailSave from "@/pages/User/CustomerData/SelectCustomerDetailData/CheckDetailSave";
+import LenderDetailData from "@/pages/User/CustomerData/SelectCustomerDetailData/LenderDetailData";
 
 const SelectCustomerDetailData=()=>{
 
@@ -30,11 +31,16 @@ const SelectCustomerDetailData=()=>{
       label: '支票存款',
       children: <CheckDetailSave/>
     },
+    {
+      key: '5',
+      label: '放款',
+      children: <LenderDetailData/>
+    },
 
   ];
 
   return(
-    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={true}  />
+    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={false}  />
 
   )
 }
