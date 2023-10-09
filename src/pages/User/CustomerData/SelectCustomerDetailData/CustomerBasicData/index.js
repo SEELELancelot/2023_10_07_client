@@ -1,13 +1,14 @@
 import {ProCard} from "@ant-design/pro-components";
 import React, {useEffect, useState} from "react";
 import {Col, Row} from "antd";
-import {axiosGetCustomerData} from "@/networkReuest/Myaxios";
+import {axiosGetCustomerData, getInterViewTotalCount} from "@/networkReuest/Myaxios";
 import {useParams} from "@/.umi/exports";
 import dayjs from "dayjs";
 
 const CustomerBasicData = () => {
   const params = useParams();
   const [customerData,setCustomerData]=useState([]);
+  const [InterViewCount,setInterViewCount]=useState([]);
 
   useEffect(()=>{
     fetchData();
@@ -15,10 +16,13 @@ const CustomerBasicData = () => {
   const fetchData=async ()=>{
     const customer_id=params.id;
     const result=await axiosGetCustomerData({customer_id});
+    const InterViewCountResult=await getInterViewTotalCount({customer_id});
     const {success,message}=result.data;
     console.log(success,message);
     if(success===1){
       setCustomerData(message);
+      // console.log(InterViewCountResult.data.success,InterViewCountResult.data.message);
+      setInterViewCount(InterViewCountResult.data.message)
     }
 
   }
@@ -79,6 +83,14 @@ const CustomerBasicData = () => {
                       <Col md={12}  xs={24}>
                         <Col>地址</Col>
                         <Col style={{marginLeft:'5px'}}>{value.customer_address}</Col>
+                      </Col>: <></>
+                  }
+
+                  {
+                    value.customer_address!==null?
+                      <Col md={12}  xs={24}>
+                        <Col>訪談次數</Col>
+                        <Col style={{marginLeft:'5px'}}>{InterViewCount[0].interViewCount}</Col>
                       </Col>: <></>
                   }
 

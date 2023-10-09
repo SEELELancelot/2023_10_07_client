@@ -293,6 +293,14 @@ const axiosGetLenderRecordDetail=async (data)=>{
   const result=await axiosInstance.post("users/getLenderRecordDetail",data);
   return result;
 }
+const getInterViewTotalCount=async (data)=>{
+  const result=await axiosInstance.post("users/getInterViewTotalCount",data);
+  return result;
+}
+const getInterViewDetailData=async (data)=>{
+  const result=await axiosInstance.post("users/getInterViewDetailData",data);
+  return result;
+}
 
 export {
   axiosLogin,
@@ -350,5 +358,7 @@ export {
   axiosGetCheckDetail,
   axiosGetCustomerData,
   axiosGetLenderRecordDetail,
+  getInterViewTotalCount,
+  getInterViewDetailData,
   mybaseUrl
 }

@@ -16,7 +16,7 @@ import {axiosgetSearchInterViewData, axiosSelectAllCustomer} from "@/networkReue
 
 const UpdateInterView = () => {
   const [customerData, setcustomerData] = useState();
-  const [InterViewData, setInterViewData] = useState();
+  const [InterViewData, setInterViewData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetchAllCustomerData();

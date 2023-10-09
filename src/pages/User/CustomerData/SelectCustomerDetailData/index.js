@@ -4,6 +4,7 @@ import CustomerBasicData from "@/pages/User/CustomerData/SelectCustomerDetailDat
 import FixDetailSave from "@/pages/User/CustomerData/SelectCustomerDetailData/FixDetailSave";
 import CheckDetailSave from "@/pages/User/CustomerData/SelectCustomerDetailData/CheckDetailSave";
 import LenderDetailData from "@/pages/User/CustomerData/SelectCustomerDetailData/LenderDetailData";
+import InterViewDetailRecord from "@/pages/User/CustomerData/SelectCustomerDetailData/InterViewDetailRecord";
 
 const SelectCustomerDetailData=()=>{
 
@@ -36,11 +37,16 @@ const SelectCustomerDetailData=()=>{
       label: '放款',
       children: <LenderDetailData/>
     },
+    {
+      key: '6',
+      label: '訪談紀錄',
+      children: <InterViewDetailRecord/>
+    },
 
   ];
 
   return(
-    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={false}  />
+    <Tabs defaultActiveKey="1" items={items} onChange={onChange}  destroyInactiveTabPane={true}  />
 
   )
 }
