@@ -1,15 +1,14 @@
 import {Footer} from '@/components';
 import type {RunTimeLayoutConfig} from '@umijs/max';
-import {history, Link} from '@umijs/max';
+import {history} from '@umijs/max';
 import {errorConfig} from './requestErrorConfig';
 import React from 'react';
 import {GetmyUserData, deleteToken} from './utils/handleToken';
 import defaultSettings from '../config/defaultSettings';
 import {Button} from "antd";
-import {flushSync} from "react-dom";
 
 const loginPath = '/login';
-const UserIndex = "/user";
+
 
 
 
@@ -18,7 +17,8 @@ export async function getInitialState(): Promise<{}> {
 
   console.log(getUserData);
   console.log(getUserData?.user_type);
-  history.push("/");  // 只要打開分頁 由首頁的狀態決定是否跳轉
+  console.log("wtwtwtwtwtwtwttwtw");
+  history.push('/index');  // 只要打開分頁 由首頁的狀態決定是否跳轉
 
   //初始沒有token 就跳轉
   // if (Object.keys(getUserData).length === 0) {
