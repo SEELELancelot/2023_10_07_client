@@ -113,8 +113,8 @@
   },
 
   {
-    path: '/index',
-    layout: true,
+    path: '/',
+    layout: false,
     component: "./Index"
     // redirect: '/login',
   },

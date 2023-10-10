@@ -15,11 +15,17 @@ const loginPath = '/login';
 export async function getInitialState(): Promise<{}> {
   const getUserData = GetmyUserData();
 
-  console.log(getUserData);
-  console.log(getUserData?.user_type);
-  console.log("wtwtwtwtwtwtwttwtw");
-  history.push('/index');  // 只要打開分頁 由首頁的狀態決定是否跳轉
+  // console.log(getUserData);
+  // console.log(getUserData?.user_type);
+  // history.push('/');  // 只要打開分頁 由首頁的狀態決定是否跳轉
 
+  if (getUserData.user_type === "0") {
+    history.push("/user");
+  } else if (getUserData.user_type === "1") {
+    history.push("/admin");
+  } else {
+    history.push("/login");
+  }
   //初始沒有token 就跳轉
   // if (Object.keys(getUserData).length === 0) {
   //   console.log("沒有狀態data");
@@ -37,7 +43,7 @@ export const layout: RunTimeLayoutConfig = ({initialState, setInitialState}) => 
     user: getUserData,
   }));
 
-  console.log(initialState.user);
+  // console.log(initialState.user);
 
   if (Object.keys(initialState.user).length === 0) {
     console.log("沒有data");

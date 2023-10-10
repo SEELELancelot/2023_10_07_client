@@ -378,7 +378,6 @@ function InsertCustomerData() {
                 label={"客戶使用語言"}
 
                 colProps={{xs: 24, sm: 12, md: 12, lg: 12, xl: 8}}
-
                 request={async () => {
                   return [
                     {
@@ -401,7 +400,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,
@@ -457,7 +455,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,
@@ -584,7 +581,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,
@@ -638,7 +634,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,
@@ -686,7 +681,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,
@@ -727,7 +721,6 @@ function InsertCustomerData() {
                 allowClear
                 // width={150}
                 fieldProps={{
-                  showArrow: false,
                   filterTreeNode: true,
                   showSearch: true,
                   popupMatchSelectWidth: false,

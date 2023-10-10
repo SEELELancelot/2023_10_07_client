@@ -1,11 +1,10 @@
 import { ProLayoutProps } from '@ant-design/pro-components';
-
+import Logo from '../public/assets/Logo.png';
 /**
  * @name
  */
 const Settings: ProLayoutProps & {
   pwa?: boolean;
-  logo?: string;
 } = {
   navTheme: 'light',
   // 拂晓蓝
@@ -21,8 +20,14 @@ const Settings: ProLayoutProps & {
   fixSiderbar: false,
   // colorWeak: false,
   title: '客戶關係管理系統',
+  onMenuHeaderClick:()=>{
+    return null;
+  },
+  logo:()=>{
+    return <img src={require("../public/logo.jpg")} width={50}  alt=""/>
+  },
   pwa: true,
-  // logo: '',
+
   iconfontUrl: '',
   token: {
     // 参见ts声明，demo 见文档，通过token 修改样式

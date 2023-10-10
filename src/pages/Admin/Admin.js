@@ -1,6 +1,6 @@
 const Admin=()=>{
   return(
-    <div>2424</div>
+    <div>admin</div>
   )
 }
 export default Admin;
