@@ -1,6 +1,6 @@
 const UnSendGift=()=>{
   return(
-    <div>3</div>
+    <div>無法送禮</div>
   )
 }
 export default UnSendGift;

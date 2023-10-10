@@ -171,13 +171,15 @@ const SelectGiftData = () => {
         <Row justify={'center'} gutter={[40, 16]}>
           <Col xs={24} sm={24} md={8} lg={8} xl={6}>
             <Form.Item name="start_date"
+
                        label="開始日期" rules={[
               {
                 // required: true,
                 message: '請輸入開始日期',
+
               },
             ]}>
-              <Input/>
+              <Input placeholder={"01/01"}/>
             </Form.Item>
           </Col>
           <Col xs={24} sm={24} md={8} lg={8} xl={6}>
@@ -188,7 +190,7 @@ const SelectGiftData = () => {
                            message: '請輸入結束日期',
                          },
                        ]}>
-              <Input/>
+              <Input placeholder={"12/31"}/>
             </Form.Item>
           </Col>
 

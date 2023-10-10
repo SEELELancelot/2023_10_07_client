@@ -271,34 +271,43 @@ const axiosGetSaveData = async (data) => {
   const result = await axiosInstance.post("users/selectSaveRecord", data);
   return result;
 }
-const axiosGetCurrentDetail=async (data)=>{
+const axiosGetCurrentDetail = async (data) => {
   console.log(data);
   const result = await axiosInstance.post("users/getCurrentDetail", data);
   return result;
 }
-const axiosGetFixDetail=async (data)=>{
+const axiosGetFixDetail = async (data) => {
   // console.log(data);
   const result = await axiosInstance.post("users/getFixDetail", data);
   return result;
 }
-const axiosGetCheckDetail=async (data)=>{
+const axiosGetCheckDetail = async (data) => {
   const result = await axiosInstance.post("users/getCheckDetail", data);
   return result;
 }
-const axiosGetCustomerData=async (data)=>{
-  const result=await axiosInstance.post("users/getCustomerData",data);
+const axiosGetCustomerData = async (data) => {
+  const result = await axiosInstance.post("users/getCustomerData", data);
   return result;
 }
-const axiosGetLenderRecordDetail=async (data)=>{
-  const result=await axiosInstance.post("users/getLenderRecordDetail",data);
+const axiosGetLenderRecordDetail = async (data) => {
+  const result = await axiosInstance.post("users/getLenderRecordDetail", data);
   return result;
 }
-const getInterViewTotalCount=async (data)=>{
-  const result=await axiosInstance.post("users/getInterViewTotalCount",data);
+const getInterViewTotalCount = async (data) => {
+  const result = await axiosInstance.post("users/getInterViewTotalCount", data);
   return result;
 }
-const getInterViewDetailData=async (data)=>{
-  const result=await axiosInstance.post("users/getInterViewDetailData",data);
+const getInterViewDetailData = async (data) => {
+  const result = await axiosInstance.post("users/getInterViewDetailData", data);
+  return result;
+}
+const getSendProgressMail = async () => {
+  const result = await axiosInstance.post("gift/getSendProgressMail");
+  return result;
+}
+
+const getSendProgressMyself=async ()=>{
+  const result = await axiosInstance.post("gift/getSendProgressMyself");
   return result;
 }
 
@@ -360,5 +369,7 @@ export {
   axiosGetLenderRecordDetail,
   getInterViewTotalCount,
   getInterViewDetailData,
+  getSendProgressMail,
+  getSendProgressMyself,
   mybaseUrl
 }
